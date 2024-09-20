@@ -1,0 +1,17 @@
+name: env_mia
+channels:
+- defaults
+- conda-forge
+dependencies:
+- python=3.9
+- numpy
+- scipy
+- matplotlib
+- nibabel
+- jupyter
+- ipykernel
+- ipympl
+- pyppeteer
+- pip:
+    - nbconvert[webpdf]
+    - nbconvert[qtpdf]
