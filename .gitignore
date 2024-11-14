@@ -2,4 +2,6 @@
 .env/
 
 # data
-**/data
+**/data.DS_Store
+w2/PICTURES.zip
+w3/
