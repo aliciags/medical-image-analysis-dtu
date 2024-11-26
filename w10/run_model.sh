@@ -9,7 +9,7 @@
 #BSUB -e test.err  # Standard error file
 
 # Activate the environment
-source /zhome/2b/8/212341/.venv/bin/activate
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
 
 # Run the Python script
 python3 exec.py > output.txt

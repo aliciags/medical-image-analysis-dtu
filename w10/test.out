@@ -112,3 +112,60 @@ PS:
 
 Read file <test.err> for stderr output of this job.
 
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23268065: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Tue Nov 26 18:13:49 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Tue Nov 26 18:22:13 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Tue Nov 26 18:22:13 2024
+Terminated at Tue Nov 26 18:30:03 2024
+Results reported at Tue Nov 26 18:30:03 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   751.00 sec.
+    Max Memory :                                 1116 MB
+    Average Memory :                             966.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31652.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   470 sec.
+    Turnaround time :                            974 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
