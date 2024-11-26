@@ -1,0 +1,114 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23267765: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Tue Nov 26 17:05:40 2024
+Job was executed on host(s) <4*n-62-20-4>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Tue Nov 26 17:09:25 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Tue Nov 26 17:09:25 2024
+Terminated at Tue Nov 26 17:09:28 2024
+Results reported at Tue Nov 26 17:09:28 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/44/2/213836/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.79 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   3 sec.
+    Turnaround time :                            228 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23267789: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Tue Nov 26 17:14:54 2024
+Job was executed on host(s) <4*n-62-11-13>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Tue Nov 26 17:15:19 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Tue Nov 26 17:15:19 2024
+Terminated at Tue Nov 26 17:15:21 2024
+Results reported at Tue Nov 26 17:15:21 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.95 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   4 sec.
+    Turnaround time :                            27 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+

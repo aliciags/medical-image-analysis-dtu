@@ -1,0 +1,10 @@
+/zhome/2b/8/212341/.lsbatch/1732637140.23267765.shell: line 12: /zhome/44/2/213836/.venv/bin/activate: Permission denied
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+/zhome/2b/8/212341/.lsbatch/1732637694.23267789.shell: line 12: /zhome/2b/8/212341/.venv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
