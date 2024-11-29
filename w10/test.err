@@ -8,3 +8,15 @@ Traceback (most recent call last):
   File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 8, in <module>
     import torch
 ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 425, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 290, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 160, in _loss_function
+    full_loss = masked_dice_loss(y_pred=outputs, y=labels, mask=mask)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'y_pred'

@@ -1,0 +1,3 @@
+Initial model: dice evaluation metric: evaluation metric: 0.8302255868911743
+Changing to ADAM + adding early stopping: evaluation metric: evaluation metric: 0.9169068932533264
+All of the above + data transformation: evaluation metric: 0.9299381971359253

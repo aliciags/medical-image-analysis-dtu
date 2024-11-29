@@ -19,6 +19,11 @@ from monai.transforms import (
     Compose,
     LoadImaged,
     RandSpatialCropd,
+    RandFlipd,
+    RandAffined,
+    RandGaussianNoised,
+    RandShiftIntensityd,
+    EnsureTyped
 )
 from monai.visualize import plot_2d_or_3d_image
 
@@ -65,10 +70,32 @@ def _get_training_transforms():
 
     train_transforms = Compose(
         [
+            # Load image and label
             LoadImaged(keys=["img", "seg"]),
             EnsureChannelFirstd(keys=["img", "seg"]),
-            RandSpatialCropd(
-                  keys=["img", "seg"],roi_size=roi_size),
+
+            # Random spatial cropping with the specified ROI size
+            RandSpatialCropd(keys=["img", "seg"], roi_size=roi_size),
+
+            # Data Augmentation
+            RandFlipd(keys=["img", "seg"], spatial_axis=[0], prob=0.5),  # Flip along axis 0
+            RandFlipd(keys=["img", "seg"], spatial_axis=[1], prob=0.5),  # Flip along axis 1
+
+            RandAffined(
+                keys=["img", "seg"],
+                prob=0.7,  # Probability of applying affine transformations
+                rotate_range=(0.1, 0.1, 0.0),  # Random rotations (radians)
+                translate_range=(10, 10, 0),  # Random translations (pixels)
+                scale_range=(0.1, 0.1, 0.0),  # Random scaling
+                mode=("bilinear", "nearest"),  # Interpolation modes
+            ),
+
+            # Non-Spatial just applied to image
+            RandGaussianNoised(keys=["img"], prob=0.2, mean=0.0, std=0.1),  # Add random Gaussian noise
+            RandShiftIntensityd(keys=["img"], offsets=0.1, prob=0.5),  # Intensity shifts
+
+            # Ensure final data format
+            EnsureTyped(keys=["img", "seg"]),
         ]
     )
 
@@ -121,8 +148,16 @@ def _loss_function(outputs, labels):
     # https://docs.monai.io/en/stable/losses.html#loss-functions
     #
 
-    dice_loss = monai.losses.DiceLoss(to_onehot_y=True, softmax=True)
-    full_loss = dice_loss(outputs, labels)
+    # dice_loss = monai.losses.DiceLoss(to_onehot_y=True, softmax=True)
+    # full_loss = dice_loss(outputs, labels)
+
+    mask = (labels != 0).float()  # Exclude class 0 (background)
+
+    # Define the Masked Dice Loss
+    masked_dice_loss = monai.losses.MaskedDiceLoss(include_background=False, to_onehot_y=True, softmax=True)
+
+    # Compute the loss
+    full_loss = masked_dice_loss(y_pred=outputs, y=labels, mask=mask)
 
     return full_loss
 
@@ -153,7 +188,8 @@ def _get_optimizer(model):
     # change the optimizers. See available algorithms here:
     # https://pytorch.org/docs/stable/optim.html#algorithms
 
-    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0)
+    # optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0)
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 
     return optimizer
 
@@ -186,6 +222,7 @@ def train(train_dir, validation_dir):
     model = _get_model(device)
 
     # TODO: Change the _get_optimizer function
+    # DONE CHANGED TO ADAM
     optimizer = _get_optimizer(model)
 
 
@@ -215,7 +252,13 @@ def train(train_dir, validation_dir):
     # TODO:
     # You can use even more the 500 epochs if you want.
 
-    epochs = 500
+    epochs = 700
+
+    # Adding early stopping
+    patience = 20
+    epochs_no_improve = 0
+    stop_training = False
+
 
     # Losses and metrics
     epoch_loss_values = list()
@@ -225,6 +268,9 @@ def train(train_dir, validation_dir):
     writer = SummaryWriter(log_dir='./log')
 
     for epoch in range(epochs):
+        if stop_training:
+            break
+
         print("-" * 100)
         print(f"epoch {epoch + 1}/{epochs}")
         model.train()
@@ -297,14 +343,22 @@ def train(train_dir, validation_dir):
                 if metric > best_metric:
                     best_metric = metric
                     best_metric_epoch = epoch + 1
+                    epochs_no_improve = 0
                     torch.save(model.state_dict(), "best_metric_model_segmentation2d_dict.pth")
                     print("saved new best metric model")
+                else: 
+                    epochs_no_improve += 1
                 print(
                     "current epoch: {} current mean dice: {:.4f} best mean dice: {:.4f} at epoch {}".format(
                         epoch + 1, metric, best_metric, best_metric_epoch
                     )
                 )
                 writer.add_scalar("val_mean_dice", metric, epoch + 1)
+
+                # Check early stopping condition
+                if epochs_no_improve >= patience:
+                    print(f"Early stopping triggered after {epoch + 1} epochs!")
+                    stop_training = True
 
     print(f"train completed, best_metric: {best_metric:.4f} at epoch: {best_metric_epoch}")
     writer.close()
