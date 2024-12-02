@@ -1,3 +1,11 @@
-Initial model: dice evaluation metric: evaluation metric: 0.8302255868911743
-Changing to ADAM + adding early stopping: evaluation metric: evaluation metric: 0.9169068932533264
-All of the above + data transformation: evaluation metric: 0.9299381971359253
+1) Initial model: 0.8302255868911743
+2) Changing to ADAM + adding early stopping: 0.9169068932533264
+3) 2 + data transformation:  0.9299381971359253
+4) 3 + Generalised Dice Loss: 0.9173843264579773
+5) 3 + upgraded u-net: 0.9096877574920654
+6) 3 + More depth model - dropout 0.2: 0.9317153096199036
+7) 6 + dropout 0.3: 0.9336526989936829
+8) 6 + dropout 0.4: 0.9352574944496155
+9) 8 + 1000 epochs: 0.9264553785324097
+10) 8 + combines losses 0.7/0.3: 0.9269823431968689
+11) 8 + combines losses 0.8/0.2: 0.935719907283783

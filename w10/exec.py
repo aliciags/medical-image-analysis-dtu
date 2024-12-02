@@ -7,6 +7,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 from torch.utils.tensorboard import SummaryWriter
+import torch.nn.functional as F
+
 
 import monai
 from monai.data import create_test_image_2d, list_data_collate, decollate_batch, DataLoader
@@ -148,16 +150,42 @@ def _loss_function(outputs, labels):
     # https://docs.monai.io/en/stable/losses.html#loss-functions
     #
 
-    # dice_loss = monai.losses.DiceLoss(to_onehot_y=True, softmax=True)
-    # full_loss = dice_loss(outputs, labels)
+    # APPROACH 1
+    dice_loss = monai.losses.DiceLoss(to_onehot_y=True, softmax=True)
+    full_loss = dice_loss(outputs, labels)
 
-    mask = (labels != 0).float()  # Exclude class 0 (background)
+    # APPROACH 2
+    # # Instantiate the Generalized Dice Loss
+    # generalized_dice_loss = monai.losses.GeneralizedDiceLoss(to_onehot_y=True, softmax=True)
 
-    # Define the Masked Dice Loss
-    masked_dice_loss = monai.losses.MaskedDiceLoss(include_background=False, to_onehot_y=True, softmax=True)
+    # # Compute the loss
+    # full_loss = generalized_dice_loss(outputs, labels)
 
-    # Compute the loss
-    full_loss = masked_dice_loss(y_pred=outputs, y=labels, mask=mask)
+    # APPROACH 3
+
+    # Squeeze the channel dimension from labels if it exists
+    # if labels.dim() == 4 and labels.size(1) == 1:
+    #     labels = labels.squeeze(1)  # Shape becomes (B, H, W)
+
+    # Dice Loss from MONAI
+    dice_loss_fn = monai.losses.DiceLoss(to_onehot_y=True, softmax=True)
+    dice_loss = dice_loss_fn(outputs, labels)
+    
+    # focal_loss_fn = monai.losses.FocalLoss(gamma=2.0)
+    # class_labels = torch.argmax(labels, dim=1) 
+    # focal_loss = focal_loss_fn(outputs, class_labels)
+
+    # Cross-Entropy loss from PyTorch
+    ce_loss_fn = torch.nn.CrossEntropyLoss()
+    # Note: CrossEntropyLoss expects labels without one-hot encoding.
+    # Remove one-hot encoding from labels if it's applied earlier.
+    labels = torch.argmax(labels, dim=1)  # Convert from one-hot to class indices
+    ce_loss = ce_loss_fn(outputs, labels)
+    
+    # Weighted combination of losses
+    dice_weight = 0.8
+    ce_weight = 0.2
+    full_loss = dice_weight * dice_loss + ce_weight * ce_loss
 
     return full_loss
 
@@ -172,11 +200,31 @@ def _get_model(device):
     # will not change if you pick another network. Those are
     # fixed by the training data.
 
+    # initial model
+    # model = monai.networks.nets.BasicUNet(
+    #     spatial_dims=2,
+    #     in_channels=1,
+    #     out_channels=4,
+    #     features=(16, 32, 32, 64, 128, 16),
+    # ).to(device)
+
+    # more neurons
+    # model = monai.networks.nets.BasicUNet(
+    #     spatial_dims=2,
+    #     in_channels=1,
+    #     out_channels=4,
+    #     features=(32, 64, 128, 256, 512, 32),
+    # ).to(device)
+
+    # more neurons + regularization and normalization
     model = monai.networks.nets.BasicUNet(
         spatial_dims=2,
         in_channels=1,
         out_channels=4,
-        features=(16, 32, 32, 64, 128, 16),
+        features=(32, 64, 128, 256, 512, 32),
+        act="LeakyReLU",
+        norm="instance",  # Instance normalization for medical imaging
+        dropout=0.4,  # Regularization
     ).to(device)
 
     return model
@@ -362,64 +410,5 @@ def train(train_dir, validation_dir):
 
     print(f"train completed, best_metric: {best_metric:.4f} at epoch: {best_metric_epoch}")
     writer.close()
-
-# This function is used for the testing the performance once the test data
-# is released
-def test(test_dir):
-    monai.config.print_config()
-    logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-
-    test_files = _get_data(test_dir)
-    test_transforms = _get_validation_transforms()
-    test_ds = monai.data.Dataset(data=test_files, transform=test_transforms)
-    # sliding window inference need to input 1 image in every iteration
-    test_loader = DataLoader(test_ds, batch_size=1, num_workers=2, collate_fn=list_data_collate)
-    dice_metric = DiceMetric(include_background=False, reduction="mean", get_not_nans=False)
-    post_trans = Compose([Activations(softmax=True), AsDiscrete(argmax=True)])
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    if not os.path.exists('output'):
-        os.mkdir('output')
-
-    model = _get_model(device)
-    model.load_state_dict(torch.load("best_metric_model_segmentation2d_dict.pth"))
-
-    model.eval()
-
-    sub = 0
-    with torch.no_grad():
-        for test_data in test_loader:
-            test_images, test_labels = test_data["img"].to(device), test_data["seg"].to(device)
-            # define sliding window size and batch size for windows inference
-            roi_size = (200, 200)
-            sw_batch_size = 4
-            val_outputs = sliding_window_inference(test_images, roi_size, sw_batch_size, model)
-            val_outputs = [post_trans(i) for i in decollate_batch(val_outputs)]
-            val_labels = decollate_batch(test_labels)
-            # compute metric for current iteration
-            dice_metric(y_pred=val_outputs, y=val_labels)
-
-            for val_output, val_label in zip(val_outputs, val_labels):
-                labels = val_output.unique().tolist()
-                out_shape = list(val_label.shape)
-                out_shape[0] = len(labels)
-                tmp = np.zeros(tuple(out_shape))
-                for i in labels:
-                    tmp[int(i), :, :] = val_output.cpu() == int(i)
-
-                plt.imsave(os.path.join('output', str(sub)+'_unet_segmentation.png'), np.moveaxis(tmp[1:,:,:], 0, -1))
-
-                tmp = np.zeros(tuple(out_shape))
-                for i in labels:
-                    tmp[int(i), :, :] = val_label.cpu() == int(i)
-
-                plt.imsave(os.path.join('output',  str(sub)+'_segmentation.png'), np.moveaxis(tmp[1:,:,:], 0, -1))
-                sub+=1
-
-        # aggregate the final mean dice result
-        print("evaluation metric:", dice_metric.aggregate().item())
-
-        # reset the status
-        dice_metric.reset()
 
 train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')

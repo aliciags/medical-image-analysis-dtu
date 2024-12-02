@@ -20,3 +20,337 @@ Traceback (most recent call last):
   File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
     return forward_call(*args, **kwargs)
 TypeError: forward() got an unexpected keyword argument 'y_pred'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 432, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 297, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 167, in _loss_function
+    full_loss = masked_dice_loss(y_pred=outputs, y=labels, mask=mask)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'y_pred'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 432, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 297, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 167, in _loss_function
+    full_loss = masked_dice_loss(y_pred=outputs, y=labels, mask=mask)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'y_pred'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 441, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 306, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 172, in _loss_function
+    ce = F.cross_entropy(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/functional.py", line 3465, in cross_entropy
+    return handle_torch_function(
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/overrides.py", line 1739, in handle_torch_function
+    result = torch_func_method(public_api, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/data/meta_tensor.py", line 282, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/_tensor.py", line 1512, in __torch_function__
+    ret = func(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/functional.py", line 3479, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(
+RuntimeError: only batches of spatial targets supported (3D tensors) but got targets of size: : [2, 1, 200, 200]
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 385, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 309, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 172, in _loss_function
+    dice = dice_loss(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/losses/dice.py", line 158, in forward
+    target = one_hot(target, num_classes=n_pred_ch)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/utils.py", line 211, in one_hot
+    raise AssertionError("labels should have a channel with length equal to one.")
+AssertionError: labels should have a channel with length equal to one.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 396, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 317, in train
+    outputs = model(inputs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/unet.py", line 297, in forward
+    x = self.model(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 132, in forward
+    return torch.cat([x, y], dim=self.dim)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/data/meta_tensor.py", line 282, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/_tensor.py", line 1512, in __torch_function__
+    ret = func(*args, **kwargs)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 25 but got size 26 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 418, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 339, in train
+    outputs = model(inputs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/dynunet.py", line 269, in forward
+    out = self.skip_layers(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/dynunet.py", line 48, in forward
+    nextout = self.next_layer(downout)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/dynunet.py", line 48, in forward
+    nextout = self.next_layer(downout)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/dynunet.py", line 48, in forward
+    nextout = self.next_layer(downout)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/dynunet.py", line 49, in forward
+    upout = self.upsample(nextout, downout)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/blocks/dynunet_block.py", line 242, in forward
+    out = torch.cat((out, skip), dim=1)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/data/meta_tensor.py", line 282, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/_tensor.py", line 1512, in __torch_function__
+    ret = func(*args, **kwargs)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 26 but got size 25 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 439, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 360, in train
+    outputs = model(inputs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/unet.py", line 297, in forward
+    x = self.model(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 132, in forward
+    return torch.cat([x, y], dim=self.dim)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/data/meta_tensor.py", line 282, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/_tensor.py", line 1512, in __torch_function__
+    ret = func(*args, **kwargs)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 25 but got size 26 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 439, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 295, in train
+    model = _get_model(device)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 211, in _get_model
+    model = monai.networks.nets.UNet(
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/unet.py", line 128, in __init__
+    raise ValueError("the length of `strides` should equal to `len(channels) - 1`.")
+ValueError: the length of `strides` should equal to `len(channels) - 1`.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 439, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 360, in train
+    outputs = model(inputs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/nets/unet.py", line 297, in forward
+    x = self.model(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 129, in forward
+    y = self.submodule(x)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/networks/layers/simplelayers.py", line 132, in forward
+    return torch.cat([x, y], dim=self.dim)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/data/meta_tensor.py", line 282, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/_tensor.py", line 1512, in __torch_function__
+    ret = func(*args, **kwargs)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 13 but got size 14 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 439, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 295, in train
+    model = _get_model(device)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 211, in _get_model
+    model = monai.networks.nets.BasicUNet(
+TypeError: __init__() got an unexpected keyword argument 'channels'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 408, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 332, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 172, in _loss_function
+    ce_loss = monai.losses.CrossEntropyLoss(softmax=True)
+AttributeError: module 'monai.losses' has no attribute 'CrossEntropyLoss'
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 411, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 335, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 179, in _loss_function
+    ce_loss = ce_loss(outputs, labels)
+UnboundLocalError: local variable 'ce_loss' referenced before assignment
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 413, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 337, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 175, in _loss_function
+    focal_loss = focal_loss_fn(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/losses/focal_loss.py", line 154, in forward
+    raise ValueError(f"ground truth has different shape ({target.shape}) from input ({input.shape})")
+ValueError: ground truth has different shape (torch.Size([2, 1, 200, 200])) from input (torch.Size([2, 4, 200, 200]))
+Traceback (most recent call last):
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 414, in <module>
+    train('./training_data_exercise/training_data/', './training_data_exercise/validation_data/')
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 338, in train
+    loss = _loss_function(outputs, labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/exec.py", line 176, in _loss_function
+    focal_loss = focal_loss_fn(outputs, class_labels)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/lib64/python3.9/site-packages/monai/losses/focal_loss.py", line 154, in forward
+    raise ValueError(f"ground truth has different shape ({target.shape}) from input ({input.shape})")
+ValueError: ground truth has different shape (torch.Size([2, 200, 200])) from input (torch.Size([2, 4, 200, 200]))

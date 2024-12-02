@@ -397,3 +397,1542 @@ PS:
 
 Read file <test.err> for stderr output of this job.
 
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308612: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 15:58:31 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 15:58:32 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 15:58:32 2024
+Terminated at Sat Nov 30 15:59:32 2024
+Results reported at Sat Nov 30 15:59:32 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 577 MB
+    Average Memory :                             438.67 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32191.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                16
+    Run time :                                   106 sec.
+    Turnaround time :                            61 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308617: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 16:01:23 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 16:01:25 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 16:01:25 2024
+Terminated at Sat Nov 30 16:06:59 2024
+Results reported at Sat Nov 30 16:06:59 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   690.00 sec.
+    Max Memory :                                 1155 MB
+    Average Memory :                             1020.80 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31613.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   447 sec.
+    Turnaround time :                            336 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308676: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 16:14:03 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 16:14:03 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 16:14:03 2024
+Terminated at Sat Nov 30 16:14:20 2024
+Results reported at Sat Nov 30 16:14:20 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 494 MB
+    Average Memory :                             494.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32274.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   113 sec.
+    Turnaround time :                            17 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308707: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 16:19:17 2024
+Job was executed on host(s) <4*n-62-20-15>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 16:19:19 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 16:19:19 2024
+Terminated at Sat Nov 30 16:30:10 2024
+Results reported at Sat Nov 30 16:30:10 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1406.00 sec.
+    Max Memory :                                 1162 MB
+    Average Memory :                             1047.71 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31606.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   651 sec.
+    Turnaround time :                            653 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308722: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 16:31:02 2024
+Job was executed on host(s) <4*n-62-20-15>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 16:31:03 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 16:31:03 2024
+Terminated at Sat Nov 30 16:40:08 2024
+Results reported at Sat Nov 30 16:40:08 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1186.00 sec.
+    Max Memory :                                 1146 MB
+    Average Memory :                             1031.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31622.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   545 sec.
+    Turnaround time :                            546 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308835: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:04:32 2024
+Job was executed on host(s) <4*n-62-11-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:06:32 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:06:32 2024
+Terminated at Sat Nov 30 17:07:34 2024
+Results reported at Sat Nov 30 17:07:34 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 232 MB
+    Average Memory :                             232.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32536.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                7
+    Run time :                                   62 sec.
+    Turnaround time :                            182 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308859: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:14:13 2024
+Job was executed on host(s) <4*n-62-11-13>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:14:35 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:14:35 2024
+Terminated at Sat Nov 30 17:14:55 2024
+Results reported at Sat Nov 30 17:14:55 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   13.00 sec.
+    Max Memory :                                 453 MB
+    Average Memory :                             453.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32315.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   20 sec.
+    Turnaround time :                            42 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308861: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:15:45 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:15:45 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:15:45 2024
+Terminated at Sat Nov 30 17:20:56 2024
+Results reported at Sat Nov 30 17:20:56 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   662.00 sec.
+    Max Memory :                                 1128 MB
+    Average Memory :                             1000.40 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31640.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   362 sec.
+    Turnaround time :                            311 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23308866: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:16:50 2024
+Job was executed on host(s) <4*n-62-11-15>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:20:05 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:20:05 2024
+Terminated at Sat Nov 30 17:28:33 2024
+Results reported at Sat Nov 30 17:28:33 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1057.00 sec.
+    Max Memory :                                 1196 MB
+    Average Memory :                             1045.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31572.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   508 sec.
+    Turnaround time :                            703 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23309071: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:29:52 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:30:27 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:30:27 2024
+Terminated at Sat Nov 30 17:30:47 2024
+Results reported at Sat Nov 30 17:30:47 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   11.00 sec.
+    Max Memory :                                 454 MB
+    Average Memory :                             454.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32314.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   21 sec.
+    Turnaround time :                            55 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23309144: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:36:10 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 17:40:35 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 17:40:35 2024
+Terminated at Sat Nov 30 17:48:37 2024
+Results reported at Sat Nov 30 17:48:37 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1005.00 sec.
+    Max Memory :                                 1186 MB
+    Average Memory :                             1101.80 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31582.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   483 sec.
+    Turnaround time :                            747 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23309174: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sat Nov 30 17:54:52 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sat Nov 30 18:02:59 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sat Nov 30 18:02:59 2024
+Terminated at Sat Nov 30 18:03:17 2024
+Results reported at Sat Nov 30 18:03:17 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   11.00 sec.
+    Max Memory :                                 487 MB
+    Average Memory :                             487.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32281.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   20 sec.
+    Turnaround time :                            505 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23312968: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 18:28:57 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 18:28:58 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 18:28:58 2024
+Terminated at Sun Dec  1 18:35:44 2024
+Results reported at Sun Dec  1 18:35:44 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   831.00 sec.
+    Max Memory :                                 1110 MB
+    Average Memory :                             994.33 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31658.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   451 sec.
+    Turnaround time :                            407 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23312996: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 18:43:59 2024
+Job was executed on host(s) <4*n-62-20-11>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 18:44:00 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 18:44:00 2024
+Terminated at Sun Dec  1 18:45:55 2024
+Results reported at Sun Dec  1 18:45:55 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   13.00 sec.
+    Max Memory :                                 56 MB
+    Average Memory :                             56.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32712.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                7
+    Run time :                                   119 sec.
+    Turnaround time :                            116 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313022: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 18:55:07 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 18:55:08 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 18:55:08 2024
+Terminated at Sun Dec  1 18:55:23 2024
+Results reported at Sun Dec  1 18:55:23 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.00 sec.
+    Max Memory :                                 501 MB
+    Average Memory :                             501.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32267.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                9
+    Run time :                                   97 sec.
+    Turnaround time :                            16 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313034: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 19:00:21 2024
+Job was executed on host(s) <4*n-62-20-11>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 19:00:22 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 19:00:22 2024
+Terminated at Sun Dec  1 19:00:39 2024
+Results reported at Sun Dec  1 19:00:39 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 497 MB
+    Average Memory :                             332.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32271.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   58 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313036: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 19:03:02 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 19:03:03 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 19:03:03 2024
+Terminated at Sun Dec  1 19:03:18 2024
+Results reported at Sun Dec  1 19:03:18 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.00 sec.
+    Max Memory :                                 496 MB
+    Average Memory :                             496.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32272.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   48 sec.
+    Turnaround time :                            16 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313038: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 19:04:35 2024
+Job was executed on host(s) <4*n-62-20-12>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 19:04:36 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 19:04:36 2024
+Terminated at Sun Dec  1 19:15:39 2024
+Results reported at Sun Dec  1 19:15:39 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1412.00 sec.
+    Max Memory :                                 1158 MB
+    Average Memory :                             1059.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31610.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   690 sec.
+    Turnaround time :                            664 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313069: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 19:20:46 2024
+Job was executed on host(s) <4*n-62-20-10>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 19:20:46 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 19:20:46 2024
+Terminated at Sun Dec  1 19:30:17 2024
+Results reported at Sun Dec  1 19:30:17 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1175.00 sec.
+    Max Memory :                                 1150 MB
+    Average Memory :                             1012.17 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31618.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   592 sec.
+    Turnaround time :                            571 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23313080: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Sun Dec  1 19:31:38 2024
+Job was executed on host(s) <4*n-62-11-14>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Sun Dec  1 19:31:38 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Sun Dec  1 19:31:38 2024
+Terminated at Sun Dec  1 19:44:23 2024
+Results reported at Sun Dec  1 19:44:23 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1604.00 sec.
+    Max Memory :                                 1166 MB
+    Average Memory :                             1055.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31602.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   822 sec.
+    Turnaround time :                            765 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23314357: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 08:38:40 2024
+Job was executed on host(s) <4*n-62-20-5>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 08:38:40 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 08:38:40 2024
+Terminated at Mon Dec  2 08:46:44 2024
+Results reported at Mon Dec  2 08:46:44 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   900.00 sec.
+    Max Memory :                                 1152 MB
+    Average Memory :                             960.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31616.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   574 sec.
+    Turnaround time :                            484 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23314395: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:06:06 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:06:06 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:06:06 2024
+Terminated at Mon Dec  2 09:06:24 2024
+Results reported at Mon Dec  2 09:06:24 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 485 MB
+    Average Memory :                             485.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32283.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   58 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23314501: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:09:26 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:09:28 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:09:28 2024
+Terminated at Mon Dec  2 09:09:44 2024
+Results reported at Mon Dec  2 09:09:44 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 490 MB
+    Average Memory :                             490.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32278.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   49 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23314502: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:10:18 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:10:20 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:10:20 2024
+Terminated at Mon Dec  2 09:22:36 2024
+Results reported at Mon Dec  2 09:22:36 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1575.00 sec.
+    Max Memory :                                 1123 MB
+    Average Memory :                             1041.88 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31645.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   771 sec.
+    Turnaround time :                            738 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23316098: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:29:14 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:29:14 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:29:14 2024
+Terminated at Mon Dec  2 09:29:30 2024
+Results reported at Mon Dec  2 09:29:30 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 494 MB
+    Average Memory :                             494.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32274.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   78 sec.
+    Turnaround time :                            16 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23317006: <train_seg_model_mia> in cluster <dcc> Exited
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:34:14 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:34:15 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:34:15 2024
+Terminated at Mon Dec  2 09:34:32 2024
+Results reported at Mon Dec  2 09:34:32 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   12.00 sec.
+    Max Memory :                                 496 MB
+    Average Memory :                             496.00 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               32272.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                8
+    Run time :                                   17 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23317012: <train_seg_model_mia> in cluster <dcc> Done
+
+Job <train_seg_model_mia> was submitted from host <n-62-12-19> by user <s241931> in cluster <dcc> at Mon Dec  2 09:37:04 2024
+Job was executed on host(s) <4*n-62-20-16>, in queue <gpuv100>, as user <s241931> in cluster <dcc> at Mon Dec  2 09:37:05 2024
+</zhome/2b/8/212341> was used as the home directory.
+</zhome/2b/8/212341/medical-image-analysis-dtu/w10> was used as the working directory.
+Started at Mon Dec  2 09:37:05 2024
+Terminated at Mon Dec  2 09:49:19 2024
+Results reported at Mon Dec  2 09:49:19 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J train_seg_model_mia     # Job name
+#BSUB -n 4                       # Number of cores
+#BSUB -W 14:00                   # Wall-clock time (14 hours here)
+#BSUB -R "rusage[mem=8GB]"       # Memory requirements (8 GB here)
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -o test.out  # Standard output file
+#BSUB -e test.err  # Standard error file
+
+# Activate the environment
+source /zhome/2b/8/212341/medical-image-analysis-dtu/w10/.venv/bin/activate
+
+# Run the Python script
+python3 exec.py > output.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1567.00 sec.
+    Max Memory :                                 1125 MB
+    Average Memory :                             952.86 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31643.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   734 sec.
+    Turnaround time :                            735 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <test.err> for stderr output of this job.
+
